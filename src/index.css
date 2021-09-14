@@ -1,0 +1,98 @@
+:root {
+  --bg: #000;
+  --black: #000;
+  --white: #fff;
+  --yellow: #eea71f;
+  --yellow-trans: #eea71f88;
+  --red: #e1503c;
+  --green: #55d13e;
+  --blue: #2c6fef;
+  --gray: #777;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 400px 200px auto;
+  grid-template-columns: auto 800px auto;
+}
+
+.move {
+  cursor: move;
+}
+
+#room {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  box-sizing: border-box;
+  border-top: 8px solid var(--red);
+  border-left: 8px solid var(--blue);
+  border-right: 8px solid var(--blue);
+  border-bottom: 8px solid var(--green);
+  background-color: var(--bg);
+}
+
+.mirror {
+  stroke-width: 4;
+  stroke: var(--gray);
+}
+
+.mirror-room {
+  fill: #0003;
+}
+
+.camera {
+  fill: var(--white);
+  stroke: var(--white);
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+
+.sphere,
+.refl-sphere {
+  fill: var(--yellow);
+}
+
+.camera-ctrl,
+.sphere-ctrl {
+  stroke: var(--bg);
+  stroke-width: 3;
+}
+
+.rays {
+  fill: var(--yellow-trans);
+}
+
+#pov {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  box-sizing: border-box;
+  border: 8px solid var(--black);
+}
+
+.wall.north {
+  fill: var(--red);
+}
+
+.wall.mirror {
+  fill: #9996;
+  stroke: none;
+}
+
+.wall.south {
+  fill: var(--green);
+}
+
+.wall.west {
+  fill: var(--blue);
+}
